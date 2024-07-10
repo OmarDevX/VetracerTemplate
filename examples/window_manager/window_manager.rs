@@ -16,15 +16,9 @@ pub mod windows{
     
     pub fn ui(&mut self, ctx: &egui::Context, ui: &mut Ui) {
         let _ = ctx;
-            self.add_new_object(ui);
             self.scene_settings(ui);
         
     }
-
-        pub fn add_new_object(&mut self, ui: &mut Ui) {
-
-        }
-    
         pub fn scene_settings(&mut self, ui: &mut Ui) {
 
         }
@@ -84,7 +78,7 @@ pub mod windows{
             egui::ScrollArea::vertical().show(ui, |ui| {
                 ui.with_layout(egui::Layout::top_down_justified(egui::Align::LEFT), |ui| {
                     ui.label("Placeholder");
-                    if ui.button("Add Sphere").clicked() {
+                    if ui.button("Default Window").clicked() {
                         self.show_sandbox_window = !self.show_sandbox_window;
                     }
             
